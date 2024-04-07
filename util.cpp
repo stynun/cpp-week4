@@ -203,7 +203,9 @@ void getCommand(Database &database) {
             std::cout << *((std::string*)entry->value) << std::endl;
         }
         else if (entry->type == ARRAY) {
-            std::cout << *((std::string*)entry->value) << std::endl;
+            Array& arr = *(Array*)entry->value;
+            printArray(arr);
+            std::cout << std::endl;
         }
     }
    
